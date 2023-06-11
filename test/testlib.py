@@ -27,13 +27,16 @@ def test_b():
 
 
 def test_widget( callback=None):
+  
   def event_h( event ):
     txt_w.value = event.obj.name
     c_w.value = txt_w.value
     if txt_w.value == 'File':
       test.File_Selector.File_Selector( c_w )
-    if callback:
-      callback(c_w.value)
+      
+  if callback:
+    callback(c_w.value)
+    
   File_b = pn.widgets.Button(name="File")
   a_b = pn.widgets.Button(name="Run")
   b_b = pn.widgets.Button(name="Stop")
@@ -42,7 +45,7 @@ def test_widget( callback=None):
   txt_w = pn.widgets.StaticText(name='Debug:', value='at start txt.')
   for i in [ File_b, a_b, b_b, c_b]:
     i.on_click( event_h )
-  r_w = pn.Row(File_b, a_b, b_b, c_b)
+  r_w = pn.Row("Master Branch", File_b, a_b, b_b, c_b)
   c_w = pn.Column(date_w, r_w, txt_w )
   return c_w
 
