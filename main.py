@@ -12,7 +12,13 @@ import sys
 # In[ ]:
 
 
-if False:
+Debug = False
+
+
+# In[ ]:
+
+
+if Debug:
   for p in sys.path:
     print(p)
 
@@ -36,5 +42,6 @@ my_w.servable()
 # In[ ]:
 
 
-my_w.CORS_folder
+if Debug:
+  print(my_w.Selected_Folder)
 

@@ -3,9 +3,9 @@ all:
 	jupyter nbconvert --to python *.ipynb 
 	mv *.py test
 
-File_Selector:
-	jupyter nbconvert --to python File_Selector.ipynb
-	mv File_Selector.py test
+Folder_Selector:
+	jupyter nbconvert --to python Folder_Selector.ipynb
+	mv Folder_Selector.py test
 main:
 	jupyter nbconvert --to python main.ipynb
 	chmod +x main.py
