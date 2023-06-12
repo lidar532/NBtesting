@@ -2,6 +2,7 @@ all:
 	echo "Building all"
 	jupyter nbconvert --to python *.ipynb 
 	mv *.py test
+	mv test/main.py ./
 
 Folder_Selector:
 	jupyter nbconvert --to python Folder_Selector.ipynb
