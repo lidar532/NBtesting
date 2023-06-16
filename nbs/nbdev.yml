@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "NBtesting"
+  site-url: "https://lidar532.github.io/NBtesting"
+  description: "Test developing apps and packages using Jupyter Notebooks"
+  repo-branch: main
+  repo-url: "https://github.com/lidar532/NBtesting"
