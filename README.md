@@ -5,3 +5,5 @@ Test developing apps and packages using Jupyter Notebooks
 * Added some panel stuff.
 * Added the Selected_Folder
 * Fixed Folder_Selector to work correctly.
+
+* Switching to nbdev
