@@ -1,0 +1,8 @@
+website:
+  sidebar:
+    contents:
+      - index.ipynb
+      - 00_testlib.ipynb
+      - 10_testlib2.ipynb
+      - 20_widgets.ipynb
+      - 90_SimplePanelTest.ipynb

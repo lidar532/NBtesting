@@ -1,7 +1,0 @@
-(base) wright@ww-w10-dt3-tpa2:~/github-projects/NBtesting$ nb
-nbdev_bump_version    nbdev_create_config   nbdev_fix             nbdev_install_quarto  nbdev_prepare         nbdev_readme          nbdev_sidebar         nbtstat.exe           
-nbdev_changelog       nbdev_docs            nbdev_help            nbdev_merge           nbdev_preview         nbdev_release_both    nbdev_test            
-nbdev_clean           nbdev_export          nbdev_install         nbdev_migrate         nbdev_proc_nbs        nbdev_release_gh      nbdev_trust           
-nbdev_conda           nbdev_filter          nbdev_install_hooks   nbdev_new             nbdev_pypi            nbdev_release_git     nbdev_update          
-(base) wright@ww-w10-dt3-tpa2:~/github-projects/NBtesting$ 
-

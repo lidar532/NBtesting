@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "testlib.html",
+    "href": "testlib.html",
+    "title": "Testlib",
+    "section": "",
+    "text": "xxx\n\nsys.path\n\n['/home/wright/github-projects/NBtesting/nbs',\n '/home/wright/miniconda3/lib/python310.zip',\n '/home/wright/miniconda3/lib/python3.10',\n '/home/wright/miniconda3/lib/python3.10/lib-dynload',\n '',\n '/home/wright/miniconda3/lib/python3.10/site-packages',\n '/home/wright/github-projects/NBtesting']\n\n\nxxx\nxxxx\nxxx\n\nsource\n\ntest_a\n\n test_a ()\n\n\nsource\n\n\ntest_b\n\n test_b ()\n\nx\n\nsource\n\n\ntest_widget\n\n test_widget (parent=None, CallBack_func=None)\n\nTest code.\n\ndef my_cb( value ):\n  print('my_cb:', value )\n\nr_w = pn.Row(\"A row\")\nw  = test_widget( CallBack_func = my_cb )\n\nw.servable()\nw\n\n\n\n\n\n  \n\n\n\n\n\nprint(w.Selected_Folder)"
+  },
+  {
+    "objectID": "widgets.html",
+    "href": "widgets.html",
+    "title": "Widgets",
+    "section": "",
+    "text": "print('Debugging FolderSelector.ipynb')\n\nDebugging FolderSelector.ipynb\n\n\n\n\n\nsource\n\n\n\n\n FolderSelector (parent, initial_dir='/', CallBack_func=None)\n\n\n\n\n\n\n\n\n\n\n\nType\nDefault\nDetails\n\n\n\n\nparent\n\n\nParent widget\n\n\ninitial_dir\nstr\n/\nDir to start in.\n\n\nCallBack_func\nNoneType\nNone\nFunction to call with selected folder.\n\n\nReturns\nobject\n\nThe folder selector object\n\n\n\n\n\n\n\npn.extension('floatpanel') \n\n# Optional Function to be called once 'Ok' or 'Cancel' buttons are pressed.\ndef My_callBack( v ):\n  debug_w.value = main_w.Selected_Folder\n\ndef Button_commands( event ):\n    w = FolderSelector( main_w, CallBack_func = My_callBack )\n\nb_w = pn.widgets.Button(name='Select Folder')\ndebug_w = pn.widgets.StaticText(name='Selected Folder:', value='nothing selected yet.')\nmain_w = pn.Row( \"Main\", b_w, debug_w )\nmain_w.Selected_Folder = None\nb_w.on_click( Button_commands )\n#display(main_w.servable())\n#main_w\nmain_w.servable()\ndisplay(main_w)\n\n\n\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n  \n\n\n\n\n\nprint(main_w.Selected_Folder)\n\nNone"
+  },
+  {
+    "objectID": "widgets.html#globals",
+    "href": "widgets.html#globals",
+    "title": "Widgets",
+    "section": "",
+    "text": "print('Debugging FolderSelector.ipynb')\n\nDebugging FolderSelector.ipynb\n\n\n\n\n\nsource\n\n\n\n\n FolderSelector (parent, initial_dir='/', CallBack_func=None)\n\n\n\n\n\n\n\n\n\n\n\nType\nDefault\nDetails\n\n\n\n\nparent\n\n\nParent widget\n\n\ninitial_dir\nstr\n/\nDir to start in.\n\n\nCallBack_func\nNoneType\nNone\nFunction to call with selected folder.\n\n\nReturns\nobject\n\nThe folder selector object\n\n\n\n\n\n\n\npn.extension('floatpanel') \n\n# Optional Function to be called once 'Ok' or 'Cancel' buttons are pressed.\ndef My_callBack( v ):\n  debug_w.value = main_w.Selected_Folder\n\ndef Button_commands( event ):\n    w = FolderSelector( main_w, CallBack_func = My_callBack )\n\nb_w = pn.widgets.Button(name='Select Folder')\ndebug_w = pn.widgets.StaticText(name='Selected Folder:', value='nothing selected yet.')\nmain_w = pn.Row( \"Main\", b_w, debug_w )\nmain_w.Selected_Folder = None\nb_w.on_click( Button_commands )\n#display(main_w.servable())\n#main_w\nmain_w.servable()\ndisplay(main_w)\n\n\n\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n  \n\n\n\n\n\nprint(main_w.Selected_Folder)\n\nNone"
+  },
+  {
+    "objectID": "testlib2.html",
+    "href": "testlib2.html",
+    "title": "testlib2",
+    "section": "",
+    "text": "import sys\n\n\nsys.path\n\n['/home/wright/github-projects/NBtesting/nbs',\n '/home/wright/miniconda3/lib/python310.zip',\n '/home/wright/miniconda3/lib/python3.10',\n '/home/wright/miniconda3/lib/python3.10/lib-dynload',\n '',\n '/home/wright/miniconda3/lib/python3.10/site-packages',\n '/home/wright/github-projects/NBtesting']\n\n\n\nsource\n\ntest_lib2_a\n\n test_lib2_a (value='Nothing')\n\n\n\n\n\nType\nDefault\nDetails\n\n\n\n\nvalue\nstr\nNothing\nA simple string\n\n\nReturns\nstr\n\nthe input value\n\n\n\n\nsource\n\n\ntest_lib2_b\n\n test_lib2_b (value='no value')\n\n\nprint( test_lib2_a('junk') )\nprint( test_lib2_b( 'some string value.') )\n\ntest_lib2_a( junk)\ntest_lib2_b( some string value. )"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "NBtesting",
+    "section": "",
+    "text": "import panel as pn\nimport NBtesting.testlib\nimport sys\nThis package contains modules wediges and testlib."
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "NBtesting",
+    "section": "Install",
+    "text": "Install\nFor testing use:\npip install -e NBtesting\nFor operational use:\npip install NBtesting"
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "NBtesting",
+    "section": "How to use",
+    "text": "How to use\nx\n\npn.extension('floatpanel')\n\n\n\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\nx\n\nmy_w = NBtesting.testlib.test_widget()\n\nx\n\nmy_w.Selected_Folder = None\n\nx\n\nmy_w.servable()\n\n\n\n\n\n  \n\n\n\n\n\nprint(my_w.Selected_Folder)\n\nNone"
+  },
+  {
+    "objectID": "simplepaneltest.html",
+    "href": "simplepaneltest.html",
+    "title": "Simple Holoviz Panel Test",
+    "section": "",
+    "text": "Import the panel package as pn\n\nimport panel as pn\n\nNext, call the extension function so we can display the widgets in the notebook output.\n\npn.extension()\n\n\n\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\n\nButton Test.\nNow, we define a simple function named clicked(event) to respond each time the button is pushed. The function simply reports the number of times the button was pushed. The widget takes the argument event object.clicks and creates a formatted string which it assignes to the t widgets value parameter.\n\ndef clicked( event):\n    t.value = f'clicked {event.obj.clicks} times'\n\nNow, we create a button widget named b, a StaticText widget named t. We assign the b button widget to call the clicked(event) function each time the button is pushed.\n\nb = pn.widgets.Button(name='Push me')\nt = pn.widgets.StaticText(name=\"Text:\", value=\"none yet\")\nwatcher = b.on_click( clicked )\n\nNow, we put the b Button and t widgets in a row together and name the row object w. Once the row object is created it can be displayed within Jupyter with the w.servable() when put in the first column on the last row.\n\nw = pn.Row(b,t)\nw.servable()\n\n\n\n\n\n  \n\n\n\n\nWe can also just assign a new string value to the StaticText value t.value directly by executing the following cell:\n\nt.value = 'Hello World !!'\nt\n\n\n\n\n\n  \n\n\n\n\nNote the Text widget’s value changes in two cells above."
+  }
+]
