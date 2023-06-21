@@ -1,8 +1,9 @@
 all:
-	echo "Building all"
-	jupyter nbconvert --to python *.ipynb 
-	mv *.py test
-	mv test/main.py ./
+	nbdev_export
+	nbdev_docs
+
+install:
+	pip install ../NBtesting
 
 Folder_Selector:
 	jupyter nbconvert --to python Folder_Selector.ipynb
