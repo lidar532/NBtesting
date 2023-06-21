@@ -2,22 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://lidar532.github.io/NBtesting/testlib.html</loc>
-    <lastmod>2023-06-21T18:17:58.939Z</lastmod>
+    <lastmod>2023-06-21T20:33:09.731Z</lastmod>
   </url>
   <url>
     <loc>https://lidar532.github.io/NBtesting/widgets.html</loc>
-    <lastmod>2023-06-21T18:17:59.159Z</lastmod>
+    <lastmod>2023-06-21T20:33:09.961Z</lastmod>
   </url>
   <url>
     <loc>https://lidar532.github.io/NBtesting/testlib2.html</loc>
-    <lastmod>2023-06-21T18:17:59.349Z</lastmod>
+    <lastmod>2023-06-21T20:33:10.141Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lidar532.github.io/NBtesting/95supersimplepaneltest.html</loc>
+    <lastmod>2023-06-21T20:33:10.321Z</lastmod>
   </url>
   <url>
     <loc>https://lidar532.github.io/NBtesting/index.html</loc>
-    <lastmod>2023-06-21T18:17:59.699Z</lastmod>
+    <lastmod>2023-06-21T20:33:10.671Z</lastmod>
   </url>
   <url>
     <loc>https://lidar532.github.io/NBtesting/simplepaneltest.html</loc>
-    <lastmod>2023-06-21T18:17:59.909Z</lastmod>
+    <lastmod>2023-06-21T20:33:10.871Z</lastmod>
   </url>
 </urlset>

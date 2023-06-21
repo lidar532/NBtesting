@@ -301,3 +301,9 @@ print(my_w.Selected_Folder)
 ``` python
 import NBtesting as nbt
 ```
+
+``` python
+nbt.__version__
+```
+
+    '0.0.4'

@@ -4,17 +4,17 @@ all:
 
 install:
 	pip install ../NBtesting
+    
+bump:
+	nbdev_bump_version
 
-Folder_Selector:
-	jupyter nbconvert --to python Folder_Selector.ipynb
-	mv Folder_Selector.py test
-main:
-	jupyter nbconvert --to python main.ipynb
-	chmod +x main.py
+widgets:
+	nbdev_export
+	jupyter nbconvert --to python 20_widgets.ipynb
 
 testlib:
 	jupyter nbconvert --to python testlib.ipynb
 	mv testlib.py test
 
 clean:
-	echo "All done" 
+	echo "Not setup yet.  All done" 

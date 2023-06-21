@@ -6,3 +6,4 @@ website:
       - 10_testlib2.ipynb
       - 20_widgets.ipynb
       - 90_SimplePanelTest.ipynb
+      - 95SuperSimplePanelTest.ipynb

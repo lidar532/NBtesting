@@ -4,7 +4,7 @@
     "href": "testlib.html",
     "title": "Testlib",
     "section": "",
-    "text": "xxx\n\nsys.path\n\n['/home/wright/github-projects/NBtesting/nbs',\n '/home/wright/miniconda3/envs/dss7/lib/python311.zip',\n '/home/wright/miniconda3/envs/dss7/lib/python3.11',\n '/home/wright/miniconda3/envs/dss7/lib/python3.11/lib-dynload',\n '',\n '/home/wright/miniconda3/envs/dss7/lib/python3.11/site-packages']\n\n\nxxx\nxxxx\nxxx\n\nsource\n\ntest_a\n\n test_a ()\n\n\nsource\n\n\ntest_b\n\n test_b ()\n\nx\n\nsource\n\n\ntest_widget\n\n test_widget (parent=None, CallBack_func=None)\n\nTest code.\n\ndef my_cb( value ):\n  print('my_cb:', value )\n\nr_w = pn.Row(\"A row\")\nw  = test_widget( CallBack_func = my_cb )\n\nw.servable()\nw\n\nmy_cb: /data\n\n\n\n  \n\n\n\n\n\nprint(w.Selected_Folder)\n\n/data"
+    "text": "xxx\n\nprint(f'Venv: {sys.prefix}')\nfor p in sys.path:\n  print(f'   {p}')\n\nVenv: /home/wright/miniconda3/envs/dss7\n   /home/wright/github-projects/NBtesting/nbs\n   /home/wright/miniconda3/envs/dss7/lib/python311.zip\n   /home/wright/miniconda3/envs/dss7/lib/python3.11\n   /home/wright/miniconda3/envs/dss7/lib/python3.11/lib-dynload\n   \n   /home/wright/miniconda3/envs/dss7/lib/python3.11/site-packages\n\n\nxxx\nxxxx\nxxx\n\nsource\n\ntest_a\n\n test_a ()\n\n\nsource\n\n\ntest_b\n\n test_b ()\n\nx\n\nsource\n\n\ntest_widget\n\n test_widget (parent=None, CallBack_func=None)\n\nTest code.\n\ndef my_cb( value ):\n  print('my_cb:', value )\n\nr_w = pn.Row(\"A row\")\nw  = test_widget( CallBack_func = my_cb )\n\nw.servable()\nw\n\nmy_cb: /data\n\n\n\n  \n\n\n\n\n\nprint(w.Selected_Folder)\n\n/data"
   },
   {
     "objectID": "widgets.html",
@@ -28,6 +28,13 @@
     "text": "import sys\n\n\nsys.path\n\n['/home/wright/github-projects/NBtesting/nbs',\n '/home/wright/miniconda3/lib/python310.zip',\n '/home/wright/miniconda3/lib/python3.10',\n '/home/wright/miniconda3/lib/python3.10/lib-dynload',\n '',\n '/home/wright/miniconda3/lib/python3.10/site-packages',\n '/home/wright/github-projects/NBtesting']\n\n\n\nsource\n\ntest_lib2_a\n\n test_lib2_a (value='Nothing')\n\n\n\n\n\nType\nDefault\nDetails\n\n\n\n\nvalue\nstr\nNothing\nA simple string\n\n\nReturns\nstr\n\nthe input value\n\n\n\n\nsource\n\n\ntest_lib2_b\n\n test_lib2_b (value='no value')\n\n\nprint( test_lib2_a('junk') )\nprint( test_lib2_b( 'some string value.') )\n\ntest_lib2_a( junk)\ntest_lib2_b( some string value. )"
   },
   {
+    "objectID": "95supersimplepaneltest.html",
+    "href": "95supersimplepaneltest.html",
+    "title": "Super Simple Panel Linkage Test.",
+    "section": "",
+    "text": "import panel as pn\npn.extension()\ni = 0\n\nbutton_w = pn.widgets.Button(name='Push me')\ntext_w   = pn.widgets.StaticText(name=\"Text:\", value=\"none yet\")\n\ndef clicked( event):\n    text_w.value = f'You clicked {event.obj.clicks} times'\n    \nwatcher = button_w.on_click( clicked )\nwidget = pn.Row(button_w, text_w)\nwidget.servable()\n\n\n\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n  \n\n\n\n\n\ni += 1\ntext_w.value = f\"You ran the cell {i} times.\""
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "NBtesting",
@@ -46,7 +53,7 @@
     "href": "index.html#how-to-use",
     "title": "NBtesting",
     "section": "How to use",
-    "text": "How to use\nx\n\npn.extension('floatpanel')\n\n\n\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\nx\n\nmy_w = NBtesting.testlib.test_widget()\n\nx\n\nmy_w.Selected_Folder = None\n\nx\n\nmy_w.servable()\n\n\n\n\n\n  \n\n\n\n\n\nprint(my_w.Selected_Folder)\n\nNone\n\n\n\nimport NBtesting as nbt"
+    "text": "How to use\nx\n\npn.extension('floatpanel')\n\n\n\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\nx\n\nmy_w = NBtesting.testlib.test_widget()\n\nx\n\nmy_w.Selected_Folder = None\n\nx\n\nmy_w.servable()\n\n\n\n\n\n  \n\n\n\n\n\nprint(my_w.Selected_Folder)\n\nNone\n\n\n\nimport NBtesting as nbt\n\n\nnbt.__version__\n\n'0.0.4'"
   },
   {
     "objectID": "simplepaneltest.html",
