@@ -13,8 +13,7 @@ widgets:
 	jupyter nbconvert --to python 20_widgets.ipynb
 
 testlib:
-	jupyter nbconvert --to python testlib.ipynb
-	mv testlib.py test
+	nbdev_export --path testlib.ipynb
 
 clean:
 	echo "Not setup yet.  All done" 

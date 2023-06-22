@@ -3,24 +3,39 @@
 # %% auto 0
 __all__ = ['test_a', 'test_b', 'test_widget']
 
-# %% ../nbs/00_testlib.ipynb 2
+# %% ../nbs/00_testlib.ipynb 5
 import panel as pn
+import sys
 
-# %% ../nbs/00_testlib.ipynb 4
-pn.extension('floatpanel')
+# %% ../nbs/00_testlib.ipynb 9
+print('Module debugging Info')
+if '__file__' not in globals():
+  __file__ = 'Not set'
+print(f'  __file__: {__file__}')
+if not hasattr(sys, 'prefix'):
+  sys.prefix = 'Not set'
+print(f'sys.prefix: {sys.prefix}')
+print('  sys.path:')
+if '__version__' in globals(  ):
+  print( f"__version__: {__version__}" )
+for p in sys.path:
+  print(f'   {p}')
 
 # %% ../nbs/00_testlib.ipynb 11
-import NBtesting.widgets
+import NBtesting.widgets as nbw
 
-# %% ../nbs/00_testlib.ipynb 16
+# %% ../nbs/00_testlib.ipynb 15
+pn.extension('floatpanel')
+
+# %% ../nbs/00_testlib.ipynb 18
 def test_a():
   print('This is test_a.')
 
-# %% ../nbs/00_testlib.ipynb 17
+# %% ../nbs/00_testlib.ipynb 20
 def test_b():
   print('this is test_b.')
 
-# %% ../nbs/00_testlib.ipynb 19
+# %% ../nbs/00_testlib.ipynb 22
 def test_widget(parent=None, CallBack_func=None ):
   
   def local_ok_callback( value ):
@@ -32,7 +47,7 @@ def test_widget(parent=None, CallBack_func=None ):
     txt_w.value = event.obj.name
     c_w.value   = txt_w.value
     if txt_w.value == 'File':
-      NBtesting.widgets.FolderSelector( c_w, CallBack_func = local_ok_callback )
+      nbw.FolderSelector( c_w, CallBack_func = local_ok_callback )
          
   File_b = pn.widgets.Button(name="File")
   a_b    = pn.widgets.Button(name="Run")
@@ -46,4 +61,5 @@ def test_widget(parent=None, CallBack_func=None ):
   c_w = pn.Column( date_w, 
                    r_w, 
                    txt_w )
+  c_w.Selected_Folder = None
   return c_w

@@ -10,4 +10,9 @@ d = { 'settings': { 'branch': 'main',
                                    'NBtesting.testlib.test_widget': ('testlib.html#test_widget', 'NBtesting/testlib.py')},
             'NBtesting.testlib2': { 'NBtesting.testlib2.test_lib2_a': ('testlib2.html#test_lib2_a', 'NBtesting/testlib2.py'),
                                     'NBtesting.testlib2.test_lib2_b': ('testlib2.html#test_lib2_b', 'NBtesting/testlib2.py')},
-            'NBtesting.widgets': {'NBtesting.widgets.FolderSelector': ('widgets.html#folderselector', 'NBtesting/widgets.py')}}}
+            'NBtesting.widgets': { 'NBtesting.widgets.FolderSelector': ('widgets.html#folderselector', 'NBtesting/widgets.py'),
+                                   'NBtesting.widgets.TOGGLE_BUTTON': ('widgets.html#toggle_button', 'NBtesting/widgets.py'),
+                                   'NBtesting.widgets.TOGGLE_BUTTON.__init__': ( 'widgets.html#toggle_button.__init__',
+                                                                                 'NBtesting/widgets.py'),
+                                   'NBtesting.widgets.TOGGLE_BUTTON.toggle_cb': ( 'widgets.html#toggle_button.toggle_cb',
+                                                                                  'NBtesting/widgets.py')}}}
